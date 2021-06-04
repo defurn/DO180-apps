@@ -1,7 +1,4 @@
 <?php
-print "new image?";
-print "oh yeah!\n";
-
 //cpu stat
 $prevVal = shell_exec("cat /proc/stat");
 $prevArr = explode(' ',trim($prevVal));
