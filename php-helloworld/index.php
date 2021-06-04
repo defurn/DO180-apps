@@ -1,7 +1,7 @@
 <?php
 print "Hello, World! php version is " . PHP_VERSION . "\n";
 print "new image?";
-	print "oh yeah!\n";
+print "oh yeah!\n";
 
 //cpu stat
 $prevVal = shell_exec("cat /proc/stat");
@@ -25,7 +25,7 @@ $stat['mem_total'] = round(preg_replace("#[^0-9]+(?:\.[0-9]*)?#", "", $mem_resul
 $mem_result = shell_exec("cat /proc/meminfo | grep MemFree");
 $stat['mem_free'] = round(preg_replace("#[^0-9]+(?:\.[0-9]*)?#", "", $mem_result) / 1024 / 1024, 3);
 $stat['mem_used'] = $stat['mem_total'] - $stat['mem_free'];
-/hdd stat
+//hdd stat
 $stat['hdd_free'] = round(disk_free_space("/") / 1024 / 1024 / 1024, 2);
 $stat['hdd_total'] = round(disk_total_space("/") / 1024 / 1024/ 1024, 2);
 $stat['hdd_used'] = $stat['hdd_total'] - $stat['hdd_free'];
