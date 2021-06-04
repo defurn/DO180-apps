@@ -36,5 +36,6 @@ $stat['network_tx'] = round(trim(file_get_contents("/sys/class/net/eth0/statisti
 header('Content-type: text/json');
 header('Content-type: application/json');
 //output data by json
-"{ \"Hello, World!\":\"hi\",\"php version is \":" . PHP_VERSION . ",\"cpu\": " . $stat['cpu'] . ", \"cpu_model\": \"" . $stat['cpu_model'] . "\"" .  ", \"mem_percent\": " . $stat['mem_percent'] . ", \"mem_total\":" . $stat['mem_total'] . ", \"mem_used\":" . $stat['mem_used'] . ", \"mem_free\":" . $stat['mem_free'] .  ", \"hdd_free\":" . $stat['hdd_free'] . ", \"hdd_total\":" . $stat['hdd_total'] . ", \"hdd_used\":" . $stat['hdd_used'] . ", \"hdd_percent\":" . $stat['hdd_percent'] . ", " .  "\"network_rx\":" . $stat['network_rx'] . ", \"network_tx\":" . $stat['network_tx'] .  "}";
+echo
+"{ \"Hello, World!\":\"hi\",\"php version is \":" . $PHP_VERSION . ",\"cpu\": " . $stat['cpu'] . ", \"cpu_model\": \"" . $stat['cpu_model'] . "\"" .  ", \"mem_percent\": " . $stat['mem_percent'] . ", \"mem_total\":" . $stat['mem_total'] . ", \"mem_used\":" . $stat['mem_used'] . ", \"mem_free\":" . $stat['mem_free'] .  ", \"hdd_free\":" . $stat['hdd_free'] . ", \"hdd_total\":" . $stat['hdd_total'] . ", \"hdd_used\":" . $stat['hdd_used'] . ", \"hdd_percent\":" . $stat['hdd_percent'] . ", " .  "\"network_rx\":" . $stat['network_rx'] . ", \"network_tx\":" . $stat['network_tx'] .  "}";
 ?>
