@@ -18,7 +18,7 @@ $stat['cpu'] =  intval(100 * (($intervalTotal - ($idle - $prevIdle)) / $interval
 $cpu_result = shell_exec("cat /proc/cpuinfo | grep model\ name");
 $stat['cpu_model'] = strstr($cpu_result, "\n", true);
 $stat['cpu_model'] = str_replace("model name    : ", "", $stat['cpu_model']);
-/memory stat
+//memory stat
 $stat['mem_percent'] = round(shell_exec("free | grep Mem | awk '{print $3/$2 * 100.0}'"), 2);
 $mem_result = shell_exec("cat /proc/meminfo | grep MemTotal");
 $stat['mem_total'] = round(preg_replace("#[^0-9]+(?:\.[0-9]*)?#", "", $mem_result) / 1024 / 1024, 3);
